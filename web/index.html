@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Offerit · England Software</title>
+  <link rel="stylesheet" href="/web/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><img src="/assets/logo.png" alt=""><span>offerit<small>by England Software</small></span></div>
+    <div class="topbar-right"><span class="top-note">A thoughtful first impression, on paper.</span><a href="https://englandsoftware.com" target="_blank" rel="noreferrer">englandsoftware.com ↗</a></div>
+  </header>
+  <main class="workspace">
+    <section class="editor" aria-labelledby="page-title">
+      <div class="intro"><p class="eyebrow"><span></span> LETTER STUDIO / 01</p><h1 id="page-title">A good letter<br><em>opens a door.</em></h1><p>Introduce your services or show a business the website you built for them. Your draft stays in this browser; the PDF is created locally.</p></div>
+      <div class="template-row" aria-label="Letter type"><span>LETTER TYPE</span><button type="button" class="template active" data-template="general" aria-pressed="true">General introduction</button><button type="button" class="template" data-template="built" aria-pressed="false">Website already built</button></div>
+      <form id="letter-form">
+        <input type="hidden" name="kind" value="general">
+        <fieldset><legend><b>01</b> The business</legend><div class="grid two"><label>Business name <input name="business" maxlength="100" required placeholder="e.g. Juniper Coffee"></label><label>Contact person <span>optional</span><input name="contact" maxlength="100" placeholder="e.g. Jordan Lee"></label></div><div class="grid two"><label>Street address <span>optional</span><input name="address" maxlength="120" placeholder="123 Main Street"></label><label>Suite or unit <span>optional</span><input name="address2" maxlength="120" placeholder="Suite 2"></label></div><div class="grid two"><label>City, state and ZIP <span>optional</span><input name="city" maxlength="120" placeholder="Tulsa, OK 74103"></label><label>Letter date <input name="date" maxlength="60" required value="{{.Today}}"></label></div></fieldset>
+        <fieldset><legend><b>02</b> Your message</legend><p class="field-note" id="message-note">Make the introduction personal, then invite them to your website.</p><label>Headline <input name="headline" maxlength="100" required></label><label>Opening <small id="opening-count"></small><textarea name="opening" maxlength="450" rows="3" required></textarea></label><div id="general-fields"><label>The opportunity <small id="opportunity-count"></small><textarea name="opportunity" maxlength="500" rows="3" required></textarea></label><label>What you can offer <small id="offer-count"></small><textarea name="offer" maxlength="500" rows="3" required></textarea></label></div><div id="built-fields" hidden><label>Live demo URL <input name="demoUrl" type="url" maxlength="500" placeholder="https://demo.example.com" disabled></label><label>Demo removal date <span>optional</span><input name="removalDate" type="date" disabled></label><div class="cost-preview"><img src="/assets/cost.png" alt="Upfront cost: $500 for the website and first year of hosting, or $550 with the optional $50 setup service"><p>This pricing graphic appears in the built website letter: $500 upfront, or $550 if setup is needed.</p></div></div><label>Next step <small id="nextStep-count"></small><textarea name="nextStep" maxlength="350" rows="2" required></textarea></label></fieldset>
+        <fieldset><legend><b>03</b> Finishing detail</legend><div class="grid two"><label>Your email <input name="senderEmail" type="email" maxlength="120" value="phillip@englandsoftware.com"></label><label>Print style <select name="theme"><option value="color">Blue accent</option><option value="mono">Black and white</option></select></label></div><p class="field-note" id="footer-note">The QR code points to englandsoftware.com. The upper right stays open for your business card.</p></fieldset>
+      </form>
+    </section>
+    <aside class="preview" aria-labelledby="preview-title"><div class="preview-bar"><div><p class="eyebrow"><span></span> LIVE PREVIEW / 02</p><h2 id="preview-title">The finished page.</h2></div><span class="page-spec">US LETTER · 8.5 × 11 IN</span></div><div class="paper-stage"><div class="paper"><iframe id="pdf-preview" title="Offer letter PDF preview"></iframe><div id="preview-empty">Enter a business name to preview your letter.</div></div></div><div class="actions"><button id="download" type="button">Download PDF <span>↗</span></button><p id="status" role="status" aria-live="polite">Ready when you are.</p></div><p class="print-note">Designed for color or black and white printing. The card space is intentionally left clear.</p></aside>
+  </main>
+  <script src="/web/app.js"></script>
+</body>
+</html>
